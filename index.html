@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de moedas</title>
+</head>
+<link rel="stylesheet" href="styles.css">
+
+<body>
+    <main>
+        <header>
+            <img src="assets/logo 1.png" id="main-img" class="imagem-principal">
+        </header>
+        <div class="painel-principal">
+            <div class="texto-e-informacoes-internas">
+                <div class="labels-e-inputs">
+                    <label><span class="legenda">Converter <b>de</b></span>
+                        <select>
+                            <option >R$ Real brasileiro</option>
+                        </select>
+                    </label>
+                    <label> <span class="legenda">Converter <b>para</b></span>
+                        <select id="moedas" onchange="trocadisplay()">
+                            <option value="dolar">US$ Dólar americano</option>
+                            <option value="euro">€ Euro</option>
+                            <option value="libra">£ Libra</option>
+                            <option value="bitcoin">BTC Bitcoin</option>
+                        </select>
+                    </label>
+                    <label class="input-valor"> <span class="legenda"><b>Valor</b></span>
+                        <input placeholder="Digite o valor" id="input-valores" type="number" oninput="atualizaDisplayReal()">
+                    </label>
+                </div>
+                <button id="botao-conversao" onclick="converter()">Converter</button>
+
+                <div class="painel-conversao">
+                    <div class="display-conversao">
+                        <img src="assets/bandeira-circulo-brasil.png" class="bandeiras">
+                        <p class="texto-acima-dos-hs-conversao" id="real" > Real</p>
+                        <h3 id="valor-real">R$ 0,00 </h3>
+
+                        <img src="assets/Vector.png" class="seta">
+                        <img src="assets/dolar-1.png" class="bandeiras" id="bandeira-que-muda">
+                        <p class="texto-acima-dos-hs-conversao" id="texto-que-muda">Dólar Americano</p>
+                        <h3 id="resultado">US$ 0.00</h3>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
+</body>
+<script src="scripts.js"></script>
+
+</html>
