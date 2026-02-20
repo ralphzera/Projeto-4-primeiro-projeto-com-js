@@ -55,10 +55,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1px;
+    gap:1px;
 }
-.seta-pra-baixo{
-    font-size:  50px;
+.seta{
+    
+    width: 35px;
+    height: 50px;
+    margin: 7px 0px;
 }
 select{
     width: 100%;
