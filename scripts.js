@@ -78,12 +78,23 @@ function converter() {
     const resultado = valor / taxa
 
     let resultadoFormatado
+    if (moeda === "dolar") {
+        resultadoFormatado = "US$ " + resultado.toFixed(2)
+    }
+
+    if (moeda === "euro") {
+        resultadoFormatado = "€ " + resultado.toFixed(2)
+    }
+
+    if (moeda === "libra") {
+        resultadoFormatado = "£ " + resultado.toFixed(2)
+    }
 
     if (moeda === "bitcoin") {
-        resultadoFormatado = resultado.toFixed(8)
-    } else {
-        resultadoFormatado = resultado.toFixed(2)
+        resultadoFormatado = "BTC " + resultado.toFixed(8)
     }
+
+    
 
     document.querySelector("#resultado").innerText = resultadoFormatado
 }
@@ -96,4 +107,9 @@ function converter() {
     300000
     outra forma de escrever if
      */
-
+    
+// if (moeda === "bitcoin") {
+    //     resultadoFormatado = "BTC " + resultado.toFixed(8)
+    // } else {
+    //     resultadoFormatado = resultado.toFixed(2)
+    // }
