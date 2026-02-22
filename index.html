@@ -17,12 +17,17 @@
             <div class="texto-e-informacoes-internas">
                 <div class="labels-e-inputs">
                     <label><span class="legenda">Converter <b>de</b></span>
-                        <select>
-                            <option >R$ Real brasileiro</option>
+                        <select id="moedas-emcima" onchange="trocadisplayEmcima() , atualizaDisplayReal()">
+                            <option value="real" >R$ Real brasileiro</option>
+                            <option value="dolar">US$ Dólar americano</option>
+                            <option value="euro">€ Euro</option>
+                            <option value="libra">£ Libra</option>
+                            <option value="bitcoin">BTC Bitcoin</option>
                         </select>
                     </label>
                     <label> <span class="legenda">Converter <b>para</b></span>
-                        <select id="moedas" onchange="trocadisplay()">
+                        <select id="moedas-embaixo" onchange="trocadisplayEmbaixo() ,atualizaDisplayReal()">
+                            <option value="real" >R$ Real brasileiro</option>
                             <option value="dolar">US$ Dólar americano</option>
                             <option value="euro">€ Euro</option>
                             <option value="libra">£ Libra</option>
@@ -37,14 +42,14 @@
 
                 <div class="painel-conversao">
                     <div class="display-conversao">
-                        <img src="assets/bandeira-circulo-brasil.png" class="bandeiras">
-                        <p class="texto-acima-dos-hs-conversao" id="real" > Real</p>
-                        <h3 id="valor-real">R$ 0,00 </h3>
+                        <img src="assets/bandeira-circulo-brasil.png" class="bandeiras" id="bandeira-da-moeda-a-ser-convertida">
+                        <p class="texto-acima-dos-hs-conversao" id="texto-emcima" > Real</p>
+                        <h3 id="resultado-emcima">R$ 0,00 </h3>
 
                         <img src="assets/Vector.png" class="seta">
-                        <img src="assets/dolar-1.png" class="bandeiras" id="bandeira-que-muda">
-                        <p class="texto-acima-dos-hs-conversao" id="texto-que-muda">Dólar Americano</p>
-                        <h3 id="resultado">US$ 0.00</h3>
+                        <img src="assets/bandeira-circulo-brasil.png" class="bandeiras" id="bandeira-da-moeda-convertida">
+                        <p class="texto-acima-dos-hs-conversao" id="texto-embaixo">Real</p>
+                        <h3 id="resultado-embaixo">R$ 0.00</h3>
                     </div>
                 </div>
 
